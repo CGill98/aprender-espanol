@@ -1,0 +1,51 @@
+body {
+    background-color: powderblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.journal-table {
+    border-collapse: collapse;
+}
+
+.add-row-btn td {
+    background-color: orangered !important;
+    padding-left: 45% !important;
+    padding-right: auto !important;
+
+}
+
+.journal-table tr td, .journal-table tr th{
+    border: 1px solid black;
+    padding: 0px;
+    background-color: peachpuff;
+    cursor: pointer;
+}
+
+.journal-table tr td textarea, .journal-table tr td textarea:focus {
+    color: black;
+    border: 0px;
+
+    padding: 0px;
+    resize: none;
+    background-color: peachpuff;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+
+
+.journal-table tr th {
+    background-color: powderblue;
+}
+
+.last-col-header {
+    background-color: orchid !important;
+    cursor: pointer;
+}
+
+.td-row {
+    background-color: peachpuff;
+    height: 5%;
+}
+

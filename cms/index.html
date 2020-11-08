@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Aprender Espanol CMS</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label>Description</label>
+        <div>
+          <textarea></textarea>
+        </div>
+      </div>
+      <div id="examples-div">
+        <label>Examples</label>
+        <div>
+          <input type="text"/>
+        </div>
+      </div>
+      <div id="key-points-div">
+        <label>Key Points</label>
+        <div>
+          <input type="text"/>
+        </div>
+      </div>
+      <input type="button" value="submit"/>
+    </form>
+    <script src="./scripts/form-dom.js"></script>
+
+  </body>
+</html>
