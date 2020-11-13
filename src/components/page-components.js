@@ -154,6 +154,18 @@ const Lesson = ({lesson_id}) => {
 const HeaderList = ({courseStateobj}) => {
     const [courses, setCourses] = useState([])
     const [coursesRetrieved, setCoursesRetrieved] = useState(false)
+    const [showDD, setShowDD] = useState(false);
+
+    const DropDownModal = () => {
+        return (
+        <ul className={style.DropDownModal}>
+            <li>Past Tense Spanish</li>
+            <li>TWO</li>
+            <li>THREE THREE THREE THREE THREE THREE THREE </li>
+            <li>FOUR</li>
+            <li>FIVE FIVEFIVEFIVEFIVEFIVEFIVEFIVEFIVEFIVE</li>
+        </ul>);
+    }
     
     if (!coursesRetrieved) {
         setCoursesRetrieved(true);
@@ -186,7 +198,8 @@ const HeaderList = ({courseStateobj}) => {
                            {course.title}</li>)
             })}
 
-            <li>More Courses</li>
+            <li onClick={()=>setShowDD(!showDD)}>More Courses</li>
+            {showDD && <DropDownModal/>}
         </ul>  )    
 }
 

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import style from './App.module.css';
-
+import logo from './assets/images/spanish-flag.png'
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,8 +27,8 @@ function App() {
     <div className={style.body}>
       <div id="header" className={style.header}>
         <div className={style.logo_and_h1}>
-          <div className={style.logo_container}>
-          </div>
+          <img src={logo}>
+          </img>
           <h1>
             Aprender Español
           </h1>
