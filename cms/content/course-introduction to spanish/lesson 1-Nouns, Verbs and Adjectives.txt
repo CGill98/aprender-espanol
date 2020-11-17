@@ -1,0 +1,46 @@
+lesson_part:Noun Gender{
+
+desc{
+The first thing to note about the Spanish language is
+that nouns have genders. Nouns are either masculine or feminine and
+we indicate this difference with use of the "definite article" which in
+English is the word "the". There are two definite articles in Spanish,
+El for masculine nouns and La for feminine nouns. A general rule is that
+nouns ending in "a" are feminine and nouns ending in "o" are masculine.  
+}
+
+examples{
+{El carro, means "The car", (masculine).},
+{El pais, means "The country", (maculine).},
+{La casa, means "The house" or "The home", (Feminine).},
+{La mesa, means "The table", (Feminine).}
+}
+
+key_points{
+{Spanish nouns are either masculine or feminine.},
+{Masculine nouns use El as their definite article.},
+{Feminine nouns use La as their definite article.}
+}
+
+}
+
+lesson_part:When the gender rule is wrong{
+
+desc{
+The rule introduction earlier, that when  
+}
+
+examples{
+{El carro, means "The car", (masculine).},
+{El pais, means "The country", (maculine).},
+{La casa, means "The house" or "The home", (Feminine).},
+{La mesa, means "The table", (Feminine).}
+}
+
+key_points{
+{Spanish nouns are either masculine or feminine.},
+{Masculine nouns use El as their definite article.},
+{Feminine nouns use La as their definite article.}
+}
+
+}

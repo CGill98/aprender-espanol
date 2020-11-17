@@ -14,7 +14,6 @@
   /*
   border: 1px solid;
   box-shadow: 5px 5px 4px #000;*/
-
 }
 
 .logo_and_h1 {
@@ -72,16 +71,21 @@ h1 {
   background-color: rgb(0, 0, 0, 0.1);
 }
 
-.DropDownModal {
-  z-index: 1;
-  top: 289px;
-  left: -164px;
-  position: relative;
+/*
+left should be relative to the more course li
+li length 164px 
+*/
+.DropDownModal { 
+  z-index: 2;
+  top: 79px;
+  right: calc(9%);
+  position: absolute;
   padding: 0px;
   height: 500px;
-  width: 162px;
+  width: 164.5px;
   background-color: #ff7520;
   display: inline-block;
+  box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
   
 }
 
