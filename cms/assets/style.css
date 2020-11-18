@@ -49,3 +49,10 @@ body {
     height: 5%;
 }
 
+.sql-form {
+    display: inline-block;
+}
+
+.output-div {
+    display: inline-block;
+}

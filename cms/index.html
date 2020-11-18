@@ -9,11 +9,11 @@
     <script>window.$ = window.jQuery = require('jquery');</script>
   </head>
   <body>
-    <form>
+    <form class="sql-form">
       <div>
         <label>Description</label>
         <div>
-          <textarea></textarea>
+          <textarea id="form-textarea"></textarea>
         </div>
       </div>
       <div id="examples-div">
@@ -28,8 +28,13 @@
           <input type="text"/>
         </div>
       </div>
-      <input type="button" value="submit"/>
+      <input type="button" value="submit" id="form-btn"/>
     </form>
+    <div class="output-div">
+      <h2>Output</h2>
+      <div id="output-text-div">
+      </div>
+    </div>
     <script src="./scripts/form-dom.js"></script>
 
   </body>
