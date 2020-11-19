@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import style from '../App.module.css';
+import DropDownModal from './DropDownModal.js'
 
 const LessonPart = ({title, desc, id}) => {
 
@@ -155,7 +156,7 @@ const HeaderList = ({courseStateobj}) => {
     const [courses, setCourses] = useState([])
     const [coursesRetrieved, setCoursesRetrieved] = useState(false)
     const [showDD, setShowDD] = useState(false);
-
+    /*
     const DropDownModal = () => {
         return (
         <ul className={style.DropDownModal}>
@@ -165,7 +166,7 @@ const HeaderList = ({courseStateobj}) => {
             <li>FOUR</li>
             <li>FIVE FIVEFIVEFIVEFIVEFIVEFIVEFIVEFIVEFIVE</li>
         </ul>);
-    }
+    }*/
     
     if (!coursesRetrieved) {
         setCoursesRetrieved(true);
@@ -199,7 +200,7 @@ const HeaderList = ({courseStateobj}) => {
             })}
 
             <li onClick={()=>setShowDD(!showDD)}>More Courses</li>
-            {showDD && <DropDownModal/>}
+            {<DropDownModal show={showDD}/>}
         </ul>  )    
 }
 

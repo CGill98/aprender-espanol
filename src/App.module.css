@@ -75,39 +75,49 @@ h1 {
 left should be relative to the more course li
 li length 164px 
 */
+@keyframes DropDownModalAnimation{
+  from {height: 0%;}
+  to {height: 100%;}
+}
+
 .DropDownModal { 
   z-index: 2;
   top: 79px;
-  right: calc(9%);
+
+  right: 0%;
   position: absolute;
   padding: 0px;
-  height: 500px;
-  width: 164.5px;
+  height: calc(100% - 79px);
+  width: 100%;
   background-color: #ff7520;
   display: inline-block;
-  box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
-  
+  animation: DropDownModalAnimation 0.5s;
+  /*box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
+  */
 }
 
-.DropDownModal li{
-  width: calc(100% - 8px);
-  height: calc(20% - 4px);
-  overflow: hidden;
+@keyframes DropDownModalAnimationGone{
+  from {height: 100%;}
+  to {height: 0%;}
+}
+
+.DropDownModalGone { 
+
+  height: 100%;
+  animation: DropDownModalAnimationGone 0.5s;
+}
+
+.DropDownModal h2 {
+  color: white;
+}
+
+.catergory {
+  display: inline-block;
+  padding: 5px;
+};
+.catergoryList li {
   display: block;
-  padding: 0px;
-  background-color: #ff7520;
-  border: solid orangered 4px;
-  border-top: 0px;
-  margin: 0px !important;
-  font-size: 18px;
-}
-
-
-.DropDownModal li:last-child{
-  border-bottom: 8px solid orangered;
-  border-radius: 0px 0px 8px 8px;
-}
-
+};
 
 .content_wrapper {
   height: auto;
