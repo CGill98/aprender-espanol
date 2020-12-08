@@ -9,32 +9,56 @@
     <script>window.$ = window.jQuery = require('jquery');</script>
   </head>
   <body>
+    <h2>Add Lesson</h2>
     <form class="sql-form">
       <div>
-        <label>Description</label>
+        <label>Lesson Title</label>
         <div>
-          <textarea id="form-textarea"></textarea>
+          <input type="text"></input>
+        </div>
+        <label>Course Title</label>
+        <div>
+          <input type="text"></input>
         </div>
       </div>
-      <div id="examples-div">
-        <label>Examples</label>
+      <h4>Lesson Parts</h4>
+      <div id='lp-1'>
         <div>
-          <input type="text"/>
+          <label>Lesson Part Title</label>
+          <div>
+            <input type="text"></input>
+          </div>
+        </div>
+        <div>
+          <label>Description</label>
+          <div>
+            <textarea id="form-textarea"></textarea>
+          </div>
+        </div>
+        <div id="examples-div">
+          <label>Examples</label>
+          <div>
+            <input type="text"/>
+          </div>
+        </div>
+        <div id="key-points-div">
+          <label>Key Points</label>
+          <div>
+            <input type="text"/>
+          </div>
         </div>
       </div>
-      <div id="key-points-div">
-        <label>Key Points</label>
-        <div>
-          <input type="text"/>
-        </div>
-      </div>
+      <input type="button" value="Add a new Lesson Part" id="new-lp-btn"/>
+      <br/>
       <input type="button" value="submit" id="form-btn"/>
     </form>
+
     <div class="output-div">
       <h2>Output</h2>
       <div id="output-text-div">
       </div>
     </div>
+    <script src="./scripts/form-data.js"></script>
     <script src="./scripts/form-dom.js"></script>
 
   </body>

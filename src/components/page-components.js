@@ -4,7 +4,7 @@ import DropDownModal from './DropDownModal.js'
 
 const LessonPart = ({title, desc, id}) => {
 
-    console.log(`lp id ${id}`)
+    //console.log(`lp id ${id}`)
 
     const [kpRetrieved, setkpRetrieved] = useState(false)
     const [keyPoints, setkp] = useState([])
@@ -107,7 +107,7 @@ const Lesson = ({lesson_id}) => {
             referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         }).then(res => res.json())
         .then(data => {
-            console.log(data)
+            //console.log(data)
             if (data.length === 0) {
                 setLessonRetrieved('The title is broken hurray')
             } else {

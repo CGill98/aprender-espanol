@@ -55,4 +55,6 @@ body {
 
 .output-div {
     display: inline-block;
+    height: 100%;
+    vertical-align: top;
 }
