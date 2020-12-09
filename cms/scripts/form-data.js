@@ -2,9 +2,8 @@ let formData = {
     courseTitle: '',
     lessonTitle: '',
     lessonParts: {
-        addLessonPart: () => {console.log('undefined')},
-        addExample: () => {console.log('undefined')},
-        removeExample: () => {console.log('undefined')},
+        removeCatergory: () => {console.log('undefined')},
+        addCatergory: () => {console.log('undefined')},
         data: []
     }
 }
@@ -19,25 +18,68 @@ formData.lessonParts.addLessonPart = (lp_id) => {
     })
 }
 
-formData.lessonParts.addExample = (lp_id, ex) => {
-    for (let i = 0; i < formData.lessonParts.data.length; i++) {
-        if (formData.lessonParts.data[i].lp_id === lp_id) {
-            formData.lessonParts.data[i].examples.push(ex)
-            break;
-        } 
+formData.lessonParts.addCatergory = (lp_id,  type) => {
+    if (type === 'example') {
+        for (let i = 0; i < formData.lessonParts.data.length; i++) {
+            if (formData.lessonParts.data[i].lp_id === lp_id) {
+                formData.lessonParts.data[i].examples.push('')
+                break;
+            } 
+        }
+    } else if (type === 'keypoint') {
+        for (let i = 0; i < formData.lessonParts.data.length; i++) {
+            if (formData.lessonParts.data[i].lp_id === lp_id) {
+                formData.lessonParts.data[i].keyPoints.push('')
+                break;
+            } 
+        }
     }
 }
 
-formData.lessonParts.removeExample = (lp_id, index) => {
-    for (let i = 0; i < formData.lessonParts.data.length; i++) {
-        if (formData.lessonParts.data[i].lp_id === lp_id) {
-            formData.lessonParts.data[i].examples.splice(index, 1) 
-            break;
-        } 
+//remove item from examples or keypoints
+formData.lessonParts.removeCatergory = (lp_id, index, type) => {
+    if (type === 'example') {
+        for (let i = 0; i < formData.lessonParts.data.length; i++) {
+            if (formData.lessonParts.data[i].lp_id === lp_id) {
+                formData.lessonParts.data[i].examples.splice(index, 1) 
+                break;
+            } 
+        }
+    } else if (type === 'keypoint') {
+        for (let i = 0; i < formData.lessonParts.data.length; i++) {
+            if (formData.lessonParts.data[i].lp_id === lp_id) {
+                formData.lessonParts.data[i].keyPoints.splice(index, 1) 
+                break;
+            } 
+        }
     }
 }
 
-formData.lessonParts.addLessonPart('lp-1')
+
+//edit a catergory entry 
+formData.lessonParts.updateCatergoryEntry = (lp_id, index, data, type) => {
+    console.log(index)
+    console.log(data)
+
+    if (type === 'example') {
+        for (let i = 0; i < formData.lessonParts.data.length; i++) {
+            if (formData.lessonParts.data[i].lp_id === lp_id) {
+                formData.lessonParts.data[i].examples[index] = data 
+                break;
+            } 
+        }
+    } else if (type === 'keypoint') {
+        for (let i = 0; i < formData.lessonParts.data.length; i++) {
+            if (formData.lessonParts.data[i].lp_id === lp_id) {
+                formData.lessonParts.data[i].keyPoints[index] = data
+                break;
+            } 
+        }
+    }
+}
+
+
+formData.lessonParts.addLessonPart('1')
 
 /*
 lesson part schema
